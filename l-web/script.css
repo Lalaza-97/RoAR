@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #340c64;
+    color: #fff;
+}
+/*navbar*/
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*logo*/
+.navbar .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.navbar .logo span{
+    color: #b300ff;
+    transition: all 0.3s ease;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+.navbar ul li a:hover,
+.navbar ul li a:active{
+    background: #fff;
+    color: #2b1055;
+}
+
+/*login*/
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% -50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.login-box{
+    display: none;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b300ff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    text-align: center;
+}
+.login-box a:hover{
+    color: #b300ff;
+}
+
+/*Home*/
+/*.home-page{
+    display: flex;
+    background: url("clos.png") no-repeat center;
+    background-color:#1f2711;
+    height:90vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'ubuntu' , sans-serif;
+}*/
+.home-page{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+}
+.home-page::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('home.png') no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+/*Responsive*/
+@media (max-width: 940px) {
+    .navbar ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #340c64;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .navbar ul li{
+        margin: 40px 0;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+}
